@@ -1,3 +1,11 @@
+<?php 
+  session_start(); 
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -24,19 +32,20 @@
     <nav class="navbar">
         <div class="content">
             <div class="logo">
-                <a href="index.html">Jayamal Textiles</a>
+                <a href="index.php">Jayamal Textiles</a>
             </div>
             <ul class="menu-list">
                 <div class="icon cancel-btn">
                     <i class="fas fa-times"></i>
                 </div>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php?logout='1'">Login</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="sizeChart.html">Size Chart</a></li>
                 <li><a href="uniforms.html">Uniform</a></li>
                 <li><a href="AboutUs.html">About Us</a></li>
                 <li><a href="contactUs.html">Contact Us</a></li>
+                
 
 
             </ul>
@@ -125,16 +134,12 @@
     </div>
     <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
-        <div class="text-center p-3"
-            style="background-color: #EDBB00;color: rgb(0, 0, 0);font-size: 30;font-weight: 500;">
+        <div class="text-center p-3"style="background-color: #EDBB00;color: rgb(0, 0, 0);font-size: 30;font-weight: 500;">
             © 2020 Copyright:
-            <a class="text-dark" style="background-color: #EDBB00;color: rgb(0, 0, 0);font-size: 30;font-weight: 500;"
-                href="index.html">JayamaliText.com</a>
-            <div class="Social_Media">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </div>
+            <a class="text-dark" style="background-color: #EDBB00;color: rgb(0, 0, 0);font-size: 30;font-weight: 500;" href="index.html">JayamaliText.com</a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
         </div>
         <!-- Copyright -->
     </footer>

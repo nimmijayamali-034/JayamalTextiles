@@ -1,3 +1,11 @@
+body {
+    
+    height: 40vh;
+    margin: 0 ;
+    padding-top: 0px;
+}
+
+
 .coverSize{
 	background-color: #17a2b8;
 	text-align: center;
@@ -13,4 +21,7 @@ padding-top: 50px;
 .uni{
 	text-align: center;
 	background-color: #989da2;
+}
+.table{
+	margin-bottom: 144px;
 }
